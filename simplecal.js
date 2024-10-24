@@ -1,10 +1,9 @@
 function add(numbers) {
     if (!numbers) return 0;
 
-    // Default delimiter is a comma or newline
     let delimiter = /,||\n/;
     
-    // Check for custom delimiter
+    // Custom delimiter
     if (numbers.startsWith("//")) {
         const delimiterEnd = numbers.indexOf("\n");
         delimiter = new RegExp(numbers.substring(2, delimiterEnd));
@@ -29,10 +28,3 @@ function add(numbers) {
 
     return sum;
 }
-
-// Examples:
-console.log(add("")); // Output: 0
-console.log(add("1")); // Output: 1
-console.log(add("1,5")); // Output: 6
-console.log(add("1\n2,3")); // Output: 6
-console.log(add("//;\n1;2")); // Output: 3
