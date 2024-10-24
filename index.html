@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Calculator</title>
+    <script src="simplecal.js" defer></script>
+    <link href="simplecal.js">
+</head>
+<body>
+    <h1>String Calculator</h1>
+    <input type="text" id="numbers" placeholder="Enter numbers">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+    const input = document.getElementById("numbers").value;
+    const resultElement = document.getElementById("result");
+    try {
+        const result = add(input);
+        resultElement.textContent = `Result: ${result}`;
+    } catch (error) {
+        resultElement.textContent = `Error: ${error.message}`;
+    }
+}
+
+    </script>
+</body>
+</html>
