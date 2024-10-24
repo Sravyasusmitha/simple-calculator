@@ -6,13 +6,34 @@
     <title>String Calculator</title>
     <script src="simplecal.js" defer></script>
     <link href="simplecal.js">
+    <style>
+        body {
+            background-color: #f7e9e5;
+        }
+        .section1{
+            text-align: center;
+        }
+        .section1 input{
+            padding: 5px;
+        }
+        .section1 button{
+            margin: 15px;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .section1 p{
+            margin: 0px !important;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>String Calculator</h1>
-    <input type="text" id="numbers" placeholder="Enter numbers">
-    <button onclick="calculate()">Calculate</button>
-    <p id="result"></p>
-
+    <div class="section1">
+        <h1>String Calculator</h1>
+        <input type="text" id="numbers" placeholder="Enter numbers"><br>
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
     <script>
         function calculate() {
     const input = document.getElementById("numbers").value;
